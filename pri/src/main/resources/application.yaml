@@ -1,0 +1,70 @@
+#mysql配置
+pri:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pri0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: gsmrlab
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis配置
+mybatis:
+  type-aliases-package: com.lj.pri.model
+#mybatis日志配置
+logging:
+  file: ${spring.application.name}.log
+  level:
+    root: info
+    com:
+      lj:
+        pri:
+          dao: debug
+#mybatis翻页插件
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+server:
+  port: 8082
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:9090
+      #取消Sentinel控制台懒加载
+      eager: true
+
+  application:
+    name: eureka-pri
+
+#Actuator配置：暴露敏感路径，默认情况下，敏感路径并不暴露
+
+# management.endpoints.web.exposure.include='*'，代表开启全部监控
+# management.endpoint.health.show-details=always，health endpoint开启显示全部细节。默认情况下/actuator/health是公开的，但不显示细节。
+# management.endpoints.web.base-path=/monitor，启用指定的url地址访问根路径，默认路径为/actuator/*，开启则访问路径变为/monitor/*。
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露xxx端点，如需暴露多个，用,分隔；如需暴露所有端点，用'*'
+        include: '*'
+  #      base-path: /monitor
+  endpoint:
+    health:
+      # 是否展示健康检查详情
+      show-details: always
+    shutdown:
+      enabled: true
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 #表示eureka client发送心跳给server端的频率
+    health-check-url-path: /actuator/health #健康检查页面的URL，相对路径，默认使用 HTTP 访问，如果需要使用 HTTPS则需要使用绝对路径配置
+
+  client:
+    registryFetchIntervalSeconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/ #服务注册中心地址

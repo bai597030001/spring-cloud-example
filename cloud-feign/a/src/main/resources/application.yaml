@@ -1,0 +1,62 @@
+a:
+  datasource:
+    url: jdbc:mysql://host-application:3306/a?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: gsmrlab
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.lj.a.model
+
+logging:
+  file: ${spring.application.name}.log
+  level:
+    com:
+      lj:
+        pri:
+          dao: debug
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+server:
+  port: 8084
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: host-application:9090
+      #取消Sentinel控制台懒加载
+      eager: true
+
+  application:
+    name: eureka-a
+
+# management.endpoints.web.exposure.include='*'，代表开启全部监控
+# management.endpoint.health.show-details=always，health endpoint开启显示全部细节。默认情况下/actuator/health是公开的，但不显示细节。
+# management.endpoints.web.base-path=/monitor，启用指定的url地址访问根路径，默认路径为/actuator/*，开启则访问路径变为/monitor/*。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  #      base-path: /monitor
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 #表示eureka client发送心跳给server端的频率
+    health-check-url-path: /actuator/health #健康检查页面的URL，相对路径，默认使用 HTTP 访问，如果需要使用 HTTPS则需要使用绝对路径配置
+
+  client:
+    registryFetchIntervalSeconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,149 @@
+[
+  {
+    "host": "192.168.199.162",
+    "port": 8081,
+    "metadata": {
+      "management.port": "8081"
+    },
+    "uri": "http://192.168.199.162:8081",
+    "secure": false,
+    "instanceId": "192.168.199.162:eureka-pri:8081",
+    "serviceId": "EUREKA-PRI",
+    "instanceInfo": {
+      "instanceId": "192.168.199.162:eureka-pri:8081",
+      "app": "EUREKA-PRI",
+      "appGroupName": null,
+      "ipAddr": "192.168.199.162",
+      "sid": "na",
+      "homePageUrl": "http://192.168.199.162:8081/",
+      "statusPageUrl": "http://192.168.199.162:8081/actuator/info",
+      "healthCheckUrl": "http://192.168.199.162:8081/actuator/health",
+      "secureHealthCheckUrl": null,
+      "vipAddress": "eureka-pri",
+      "secureVipAddress": "eureka-pri",
+      "countryId": 1,
+      "dataCenterInfo": {
+        "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+        "name": "MyOwn"
+      },
+      "hostName": "192.168.199.162",
+      "status": "UP",
+      "overriddenStatus": "UNKNOWN",
+      "leaseInfo": {
+        "renewalIntervalInSecs": 10,
+        "durationInSecs": 90,
+        "registrationTimestamp": 1582169437534,
+        "lastRenewalTimestamp": 1582181416304,
+        "evictionTimestamp": 0,
+        "serviceUpTimestamp": 1582169437534
+      },
+      "isCoordinatingDiscoveryServer": false,
+      "metadata": {
+        "management.port": "8081"
+      },
+      "lastUpdatedTimestamp": 1582169437534,
+      "lastDirtyTimestamp": 1582169437495,
+      "actionType": "ADDED",
+      "asgName": null
+    },
+    "scheme": null
+  },
+  {
+    "host": "192.168.199.162",
+    "port": 8083,
+    "metadata": {
+      "management.port": "8083"
+    },
+    "uri": "http://192.168.199.162:8083",
+    "secure": false,
+    "instanceId": "192.168.199.162:eureka-pri:8083",
+    "serviceId": "EUREKA-PRI",
+    "instanceInfo": {
+      "instanceId": "192.168.199.162:eureka-pri:8083",
+      "app": "EUREKA-PRI",
+      "appGroupName": null,
+      "ipAddr": "192.168.199.162",
+      "sid": "na",
+      "homePageUrl": "http://192.168.199.162:8083/",
+      "statusPageUrl": "http://192.168.199.162:8083/actuator/info",
+      "healthCheckUrl": "http://192.168.199.162:8083/actuator/health",
+      "secureHealthCheckUrl": null,
+      "vipAddress": "eureka-pri",
+      "secureVipAddress": "eureka-pri",
+      "countryId": 1,
+      "dataCenterInfo": {
+        "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+        "name": "MyOwn"
+      },
+      "hostName": "192.168.199.162",
+      "status": "UP",
+      "overriddenStatus": "UNKNOWN",
+      "leaseInfo": {
+        "renewalIntervalInSecs": 10,
+        "durationInSecs": 90,
+        "registrationTimestamp": 1582179566457,
+        "lastRenewalTimestamp": 1582181417381,
+        "evictionTimestamp": 0,
+        "serviceUpTimestamp": 1582179566457
+      },
+      "isCoordinatingDiscoveryServer": false,
+      "metadata": {
+        "management.port": "8083"
+      },
+      "lastUpdatedTimestamp": 1582179566457,
+      "lastDirtyTimestamp": 1582179566414,
+      "actionType": "ADDED",
+      "asgName": null
+    },
+    "scheme": null
+  },
+  {
+    "host": "192.168.199.162",
+    "port": 8082,
+    "metadata": {
+      "management.port": "8082"
+    },
+    "uri": "http://192.168.199.162:8082",
+    "secure": false,
+    "instanceId": "192.168.199.162:eureka-pri:8082",
+    "serviceId": "EUREKA-PRI",
+    "instanceInfo": {
+      "instanceId": "192.168.199.162:eureka-pri:8082",
+      "app": "EUREKA-PRI",
+      "appGroupName": null,
+      "ipAddr": "192.168.199.162",
+      "sid": "na",
+      "homePageUrl": "http://192.168.199.162:8082/",
+      "statusPageUrl": "http://192.168.199.162:8082/actuator/info",
+      "healthCheckUrl": "http://192.168.199.162:8082/actuator/health",
+      "secureHealthCheckUrl": null,
+      "vipAddress": "eureka-pri",
+      "secureVipAddress": "eureka-pri",
+      "countryId": 1,
+      "dataCenterInfo": {
+        "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+        "name": "MyOwn"
+      },
+      "hostName": "192.168.199.162",
+      "status": "UP",
+      "overriddenStatus": "UNKNOWN",
+      "leaseInfo": {
+        "renewalIntervalInSecs": 10,
+        "durationInSecs": 90,
+        "registrationTimestamp": 1582170028496,
+        "lastRenewalTimestamp": 1582181417226,
+        "evictionTimestamp": 0,
+        "serviceUpTimestamp": 1582170028496
+      },
+      "isCoordinatingDiscoveryServer": false,
+      "metadata": {
+        "management.port": "8082"
+      },
+      "lastUpdatedTimestamp": 1582170028496,
+      "lastDirtyTimestamp": 1582170028468,
+      "actionType": "ADDED",
+      "asgName": null
+    },
+    "scheme": null
+  }
+]
