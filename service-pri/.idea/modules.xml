@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/service-pri.iml" filepath="$PROJECT_DIR$/service-pri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-pri-interface/service-pri-interface.iml" filepath="$PROJECT_DIR$/service-pri-interface/service-pri-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-pri-server/service-pri-server.iml" filepath="$PROJECT_DIR$/service-pri-server/service-pri-server.iml" />
+    </modules>
+  </component>
+</project>

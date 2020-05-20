@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @EnableDiscoveryClient
-@EnableHystrix
-@EnableCircuitBreaker
+@EnableHystrix //@EnableHystrix 中包含了 @EnableCircuitBreaker。
+//@EnableCircuitBreaker
 @SpringBootApplication
 @RestController
 @CrossOrigin(allowCredentials = "true")
